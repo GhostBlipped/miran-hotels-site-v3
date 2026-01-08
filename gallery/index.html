@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gallery | Miran Hotels & Suites</title>
+
+  <meta name="description" content="Browse photos of Miran Hotels & Suites — rooms, suites, interiors, and property highlights in Faridabad." />
+  <link rel="canonical" href="https://miranhotels.com/gallery/" />
+
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <div class="nav">
+      <a class="brand" href="/">
+        <div class="brand-mark">M</div>
+        <div class="brand-title">
+          <b>MIRAN HOTELS &amp; SUITES</b>
+          <span>Mathura Road • Faridabad</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="/rooms/">Rooms</a>
+        <a href="/gallery/">Gallery</a>
+        <a href="/location/">Location</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn ghost" id="waTop" href="#" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn primary" href="/rooms/">Book / Rooms</a>
+        <button class="nav-toggle" data-nav-toggle>☰</button>
+      </div>
+    </div>
+
+    <div class="mobile-menu hide" data-mobile-menu>
+      <a href="/rooms/">Rooms</a>
+      <a href="/gallery/">Gallery</a>
+      <a href="/location/">Location</a>
+      <a href="/contact/">Contact</a>
+      <a class="btn primary" href="/rooms/">Book / Rooms</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="kicker">Explore</div>
+        <h1>Gallery</h1>
+        <p>Property highlights, rooms, suites, and interiors — a glimpse of your stay.</p>
+      </div>
+    </div>
+
+    <div class="grid">
+      <a class="card tile" href="/images/deluxe-room-01.jpeg" target="_blank">
+        <img src="/images/deluxe-room-01.jpeg" alt="Deluxe Room" />
+        <div class="pad">
+          <h3>Deluxe Room</h3>
+          <p>Comfort-first interiors for work and rest.</p>
+        </div>
+      </a>
+
+      <a class="card tile" href="/images/superior-room-with-private-balcony-01.jpeg" target="_blank">
+        <img src="/images/superior-room-with-private-balcony-01.jpeg" alt="Superior Room with Private Balcony" />
+        <div class="pad">
+          <h3>Superior Room</h3>
+          <p>Private balcony and premium fittings.</p>
+        </div>
+      </a>
+
+      <a class="card tile" href="/images/premium-room-with-living-area-01.jpeg" target="_blank">
+        <img src="/images/premium-room-with-living-area-01.jpeg" alt="Premium Suite with Living Area" />
+        <div class="pad">
+          <h3>Premium Suite</h3>
+          <p>Separate living area for extended stays.</p>
+        </div>
+      </a>
+    </div>
+
+    <!-- Finished CTA -->
+    <div class="card" style="padding:16px; margin-top:18px;">
+      <div style="display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap;">
+        <div>
+          <h3>More photos &amp; videos</h3>
+          <p class="muted">
+            Want to see washrooms, balcony views, lobby, reception, and more?
+            Message us and we’ll share the full gallery instantly.
+          </p>
+        </div>
+        <div>
+          <a class="btn primary" id="waGallery" href="#" target="_blank" rel="noopener">WhatsApp for full gallery</a>
+          <a class="btn ghost" href="/rooms/">View rooms</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <b>MIRAN HOTELS &amp; SUITES</b><br/>
+      <small>Mathura Road • Faridabad</small>
+    </div>
+
+    <div>
+      <a href="/rooms/">Rooms</a><br/>
+      <a href="/gallery/">Gallery</a><br/>
+      <a href="/location/">Location</a><br/>
+      <a href="/contact/">Contact</a>
+    </div>
+
+    <div>
+      <a href="/privacy-policy/">Privacy Policy</a><br/>
+      <a href="/terms/">Terms</a>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/main.js" defer></script>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const phone = "9266134138";
+
+    const fallbackWhatsApp = (p, t) => {
+      const digits = String(p).replace(/\D/g, "");
+      return `https://wa.me/${digits}?text=${encodeURIComponent(t)}`;
+    };
+
+    const buildWa = (text) => (window.miranWhatsApp
+      ? window.miranWhatsApp(phone, text)
+      : fallbackWhatsApp(phone, text)
+    );
+
+    // Header CTA
+    const waTop = buildWa("Hi Miran Hotels, I want to book a room.");
+    const elTop = document.getElementById("waTop");
+    if (elTop) elTop.href = waTop;
+
+    // Gallery CTA
+    const waGallery = buildWa("Hi Miran Hotels, please share the full gallery photos & videos.");
+    const elGallery = document.getElementById("waGallery");
+    if (elGallery) elGallery.href = waGallery;
+  });
+</script>
+
+</body>
+</html>
