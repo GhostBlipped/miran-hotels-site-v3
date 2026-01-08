@@ -55,7 +55,13 @@
     <section class="hero">
       <div class="container hero-grid">
         <div class="card hero-media">
-          <img src="/images/facade-night-02.jpeg" alt="Miran Hotels & Suites facade at night" />
+          <div class="carousel hero-media" data-carousel data-autoplay="true" aria-label="Hotel highlights">
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="/images/facade-night-02.jpeg" alt="Miran Hotels & Suites facade at night" /></div>
+              <div class="carousel-slide"><img src="/images/facade-night-01.jpeg" alt="Miran Hotels & Suites facade at night (alternate)" /></div>
+              <div class="carousel-slide"><img src="/images/facade-day-01.jpeg" alt="Miran Hotels & Suites facade in day" /></div>
+            </div>
+          </div>
           <div class="hero-overlay">
             <div class="hero-inner">
               <span class="badge">Premium stays • Family &amp; business friendly</span>
@@ -216,7 +222,7 @@
     </div>
   </footer>
 
-  <script src="/assets/main.js" defer></script>
+  <script src="/assets/main.js"></script>
   <script>
     const wa = window.miranWhatsApp("9266134138", "Hi Miran Hotels, I want to enquire about a booking.");
     ["waTop","waHero","waBottom"].forEach(id => {
