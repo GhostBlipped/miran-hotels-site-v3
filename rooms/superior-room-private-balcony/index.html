@@ -31,7 +31,7 @@
         </nav>
 
         <div class="nav-actions">
-          <a class="btn ghost" id="waTop" href="#" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn ghost" id="waTop" href="#" target="_blank" rel="noopener"><span data-icon="whatsapp"></span><span class="btn-text">WhatsApp</span></a>
           <a class="btn primary" href="/rooms/" aria-label="Back to rooms">Back to Rooms</a>
           <button class="nav-toggle" data-nav-toggle aria-label="Open menu" aria-expanded="false">☰</button>
         </div>
@@ -59,9 +59,26 @@
           </div>
         </div>
 
-        <div class="hero-grid" style="display:grid; grid-template-columns: 1.2fr .8fr; gap:24px; align-items:start;">
+        <div class="room-layout">
           <div class="card" style="overflow:hidden;">
-            <img src="/images/superior-room-with-private-balcony-01.jpeg" alt="Superior Room with Private Balcony" style="width:100%; height:auto; display:block;" />
+            <div class="room-hero-media">
+              <div class="carousel" data-carousel data-autoplay="3500">
+                <div class="carousel-track">
+                  <div class="carousel-slide"><img src="/images/superior-room-with-private-balcony-01.jpeg" alt="Superior Room with private balcony photo 1" /></div>
+                  <div class="carousel-slide"><img src="/images/superior-room-with-private-balcony-02.jpeg" alt="Superior Room with private balcony photo 2" /></div>
+                  <div class="carousel-slide"><img src="/images/superior-room-with-private-balcony-03.jpeg" alt="Superior Room with private balcony photo 3" /></div>
+                  <div class="carousel-slide"><img src="/images/superior-room-with-private-balcony-04.jpeg" alt="Superior Room with private balcony photo 4" /></div>
+                  <div class="carousel-slide"><img src="/images/superior-room-with-private-balcony-05.jpeg" alt="Superior Room with private balcony photo 5" /></div>
+                </div>
+                <div class="carousel-controls">
+                  <div class="carousel-arrows">
+                    <button class="carousel-btn" type="button" data-carousel-prev aria-label="Previous">‹</button>
+                    <button class="carousel-btn" type="button" data-carousel-next aria-label="Next">›</button>
+                  </div>
+                  <div class="carousel-dots" aria-label="Carousel pagination"></div>
+                </div>
+              </div>
+            </div>
             <div class="pad">
               <div class="meta" style="display:flex; gap:10px; flex-wrap:wrap;">
                 <span>Private balcony</span>
@@ -70,8 +87,8 @@
                 <span>Wi‑Fi</span>
               </div>
               <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:14px;">
-                <a class="btn primary" id="waBook" href="#" target="_blank" rel="noopener">WhatsApp to Book</a>
-                <a class="btn ghost" href="/location/">Get Directions</a>
+                <a class="btn primary" id="waBook" href="#" target="_blank" rel="noopener"><span data-icon="whatsapp"></span><span class="btn-text">WhatsApp to Book</span></a>
+                <a class="btn ghost" id="mapsCta" href="#" target="_blank" rel="noopener"><span data-icon="map"></span><span class="btn-text">Get Directions</span></a>
               </div>
               <div class="spacer"></div>
               <small style="opacity:.85;">Tip: ask on WhatsApp for best available rate + early check‑in/late check‑out (subject to availability).</small>
@@ -171,35 +188,16 @@
     </div>
   </footer>
 
-  <script src="/assets/main.js" defer></script>
+  <script src="/assets/main.js"></script>
   <script>
     const wa = window.miranWhatsApp("9266134138", "Hi Miran Hotels, I want to book the Superior Room (Private Balcony)." );
+    const maps = "https://www.google.com/maps/search/?api=1&query=Miran%20Hotel%20%26%20Suites%20Mathura%20Road%20Faridabad";
     const elTop = document.getElementById("waTop");
     const elBook = document.getElementById("waBook");
+    const elMaps = document.getElementById("mapsCta");
     if (elTop) elTop.href = wa;
     if (elBook) elBook.href = wa;
+    if (elMaps) elMaps.href = maps;
   </script>
 </body>
-</html> <!doctype html>
-<html lang="en">
-<head>          
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Rooms | Miran Hotels & Suites, Faridabad</title>
-
-  <meta name="description" content="Explore the rooms at Miran Hotels & Suites, Faridabad — a blend of comfort, modern amenities, and warm hospitality for a memorable stay." />
-  <link rel="canonical" href="https://miranhotels.com/rooms/" />
-
-  <link rel="stylesheet" href="/assets/styles.css" />
-</head>
-<body>      
-
-  <header class="header">
-    <div class="container">
-      <div class="nav">
-        <a class="brand" href="/" aria-label="Miran Hotels & Suites Home">
-          <div class="brand-mark">M</div>
-          <div class="brand-title">
-            <b>MIRAN HOTELS &amp; SUITES</b>
-            <span>Mathura Road • Faridabad</span>
-          </div>                            
+</html>

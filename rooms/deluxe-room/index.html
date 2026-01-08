@@ -20,7 +20,7 @@
 <header class="header">
   <div class="container">
     <div class="nav">
-      <a class="brand" href="../../">
+      <a class="brand" href="/" aria-label="Miran Hotels & Suites Home">
         <div class="brand-mark">M</div>
         <div class="brand-title">
           <b>MIRAN HOTELS &amp; SUITES</b>
@@ -29,15 +29,15 @@
       </a>
 
       <nav class="nav-links" aria-label="Primary">
-        <a href="../">Rooms</a>
-        <a href="../../gallery/">Gallery</a>
-        <a href="../../location/">Location</a>
-        <a href="../../contact/">Contact</a>
+        <a href="/rooms/">Rooms</a>
+        <a href="/gallery/">Gallery</a>
+        <a href="/location/">Location</a>
+        <a href="/contact/">Contact</a>
       </nav>
 
       <div class="nav-actions">
-        <a class="btn ghost" id="waTop" href="#" target="_blank" rel="noopener">WhatsApp</a>
-        <a class="btn primary" href="../">Back to Rooms</a>
+        <a class="btn ghost" id="waTop" href="#" target="_blank" rel="noopener"><span data-icon="whatsapp"></span><span class="btn-text">WhatsApp</span></a>
+        <a class="btn primary" href="/rooms/">Back to Rooms</a>
       </div>
     </div>
   </div>
@@ -53,28 +53,47 @@
           <p>Modern interiors with essential comforts — ideal for business travellers and short family stays.</p>
         </div>
         <div style="display:flex; gap:10px; flex-wrap:wrap;">
-          <a class="btn" href="../../location/">Get Directions</a>
-          <a class="btn primary" id="waCta" href="#" target="_blank" rel="noopener">WhatsApp to Book</a>
+          <a class="btn" id="mapsCta" href="#" target="_blank" rel="noopener"><span data-icon="map"></span><span class="btn-text">Get Directions</span></a>
+          <a class="btn primary" id="waCta" href="#" target="_blank" rel="noopener"><span data-icon="whatsapp"></span><span class="btn-text">WhatsApp to Book</span></a>
         </div>
       </div>
 
-      <div class="grid" style="grid-template-columns: 1.25fr .75fr; align-items:start;">
+      <div class="room-layout">
         <!-- Gallery card -->
         <div class="card" style="overflow:hidden;">
-          <img src="/images/deluxe-room-01.jpeg" alt="Deluxe Room interior at Miran Hotels & Suites" style="width:100%; height:auto; display:block;" />
+          <div class="room-hero-media">
+            <div class="carousel" data-carousel data-autoplay="3500">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="/images/deluxe-room-01.jpeg" alt="Deluxe Room interior photo 1" /></div>
+                <div class="carousel-slide"><img src="/images/deluxe-room-02.jpeg" alt="Deluxe Room interior photo 2" /></div>
+                <div class="carousel-slide"><img src="/images/deluxe-room-03.jpeg" alt="Deluxe Room interior photo 3" /></div>
+                <div class="carousel-slide"><img src="/images/deluxe-room-04.jpeg" alt="Deluxe Room interior photo 4" /></div>
+                <div class="carousel-slide"><img src="/images/deluxe-room-05.jpeg" alt="Deluxe Room interior photo 5" /></div>
+              </div>
+              <div class="carousel-controls">
+                <div class="carousel-arrows">
+                  <button class="carousel-btn" type="button" data-carousel-prev aria-label="Previous">‹</button>
+                  <button class="carousel-btn" type="button" data-carousel-next aria-label="Next">›</button>
+                </div>
+                <div class="carousel-dots" aria-label="Carousel pagination"></div>
+              </div>
+            </div>
+          </div>
+
           <div class="pad">
             <div class="kicker">Gallery</div>
-            <p style="margin-top:8px;">A quick preview — we’ll expand to full gallery view.</p>
+            <p style="margin-top:8px;">Swipe or use arrows to view more photos of the Deluxe Room.</p>
 
             <div class="gallery-grid" style="margin-top:12px;">
-              <a href="../../gallery/"><img src="/images/deluxe-room-02.jpeg" alt="Deluxe Room photo 2" /></a>
-              <a href="../../gallery/"><img src="/images/deluxe-room-03.jpeg" alt="Deluxe Room photo 3" /></a>
-              <a href="../../gallery/"><img src="/images/deluxe-room-04.jpeg" alt="Deluxe Room photo 4" /></a>
-              <a href="../../gallery/"><img src="/images/deluxe-room-05.jpeg" alt="Deluxe Room photo 5" /></a>
+              <a href="/images/deluxe-room-02.jpeg" target="_blank" rel="noopener"><img src="/images/deluxe-room-02.jpeg" alt="Deluxe Room photo 2" /></a>
+              <a href="/images/deluxe-room-03.jpeg" target="_blank" rel="noopener"><img src="/images/deluxe-room-03.jpeg" alt="Deluxe Room photo 3" /></a>
+              <a href="/images/deluxe-room-04.jpeg" target="_blank" rel="noopener"><img src="/images/deluxe-room-04.jpeg" alt="Deluxe Room photo 4" /></a>
+              <a href="/images/deluxe-room-05.jpeg" target="_blank" rel="noopener"><img src="/images/deluxe-room-05.jpeg" alt="Deluxe Room photo 5" /></a>
             </div>
 
-            <div style="margin-top:14px;">
-              <a class="btn" href="../../gallery/">Open full gallery</a>
+            <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+              <a class="btn" href="/gallery/"><span data-icon="image"></span><span class="btn-text">Open full gallery</span></a>
+              <a class="btn" id="waGallery" href="#" target="_blank" rel="noopener"><span data-icon="whatsapp"></span><span class="btn-text">Request more photos</span></a>
             </div>
           </div>
         </div>
@@ -103,8 +122,8 @@
           </div>
 
           <div style="margin-top:14px; display:grid; gap:10px;">
-            <a class="btn dark" id="waBottom" href="#" target="_blank" rel="noopener">WhatsApp Booking</a>
-            <a class="btn" href="../../contact/">Contact &amp; Enquiry</a>
+            <a class="btn dark" id="waBottom" href="#" target="_blank" rel="noopener"><span data-icon="whatsapp"></span><span class="btn-text">WhatsApp Booking</span></a>
+            <a class="btn" href="/contact/">Contact &amp; Enquiry</a>
           </div>
         </aside>
       </div>
@@ -127,19 +146,27 @@
       <small>Mathura Road, Faridabad</small>
     </div>
     <div>
-      <a href="../../privacy-policy/">Privacy Policy</a><br />
-      <a href="../../terms/">Terms</a>
+      <a href="/privacy-policy/">Privacy Policy</a><br />
+      <a href="/terms/">Terms</a>
     </div>
   </div>
 </footer>
 
-<script src="/assets/main.js" defer></script>
+<script src="/assets/main.js"></script>
 <script>
-  const wa = window.miranWhatsApp("9266134138", "Hi Miran Hotels, I want to book the Deluxe Room.");
+  const waBook = window.miranWhatsApp("9266134138", "Hi Miran Hotels, I want to book the Deluxe Room.");
+  const waMore = window.miranWhatsApp("9266134138", "Hi Miran Hotels, please share more photos/videos of the Deluxe Room (washroom, lobby, reception, balcony if any).");
+  const maps = "https://www.google.com/maps/search/?api=1&query=Miran%20Hotel%20%26%20Suites%20Mathura%20Road%20Faridabad";
+
   ["waTop","waCta","waBottom"].forEach(id => {
     const el = document.getElementById(id);
-    if (el) el.href = wa;
+    if (el) el.href = waBook;
   });
+  const elGallery = document.getElementById("waGallery");
+  if (elGallery) elGallery.href = waMore;
+
+  const elMaps = document.getElementById("mapsCta");
+  if (elMaps) elMaps.href = maps;
 </script>
 
 <script type="application/ld+json">
